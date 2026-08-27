@@ -12,3 +12,15 @@ navLinks.querySelectorAll('a').forEach(link => {
     navLinks.classList.remove('is-open');
   });
 });
+
+// Carrusel del hero: cambia de imagen cada 4 segundos
+const slides = document.querySelectorAll('#heroCarousel .carousel__slide');
+let currentSlide = 0;
+
+if (slides.length > 0) {
+  setInterval(() => {
+    slides[currentSlide].classList.remove('is-active');
+    currentSlide = (currentSlide + 1) % slides.length;
+    slides[currentSlide].classList.add('is-active');
+  }, 4000);
+}

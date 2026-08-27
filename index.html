@@ -20,6 +20,11 @@
     <div class="nav__inner">
       <a href="#inicio" class="nav__logo"><img src="assets/logo.png" alt="Producciones M&K" class="nav__logo-img"></a>
 
+      <!-- Botón hamburguesa, solo visible en móvil -->
+      <button class="nav__toggle" id="navToggle" aria-label="Abrir menú">
+        <span></span><span></span><span></span>
+      </button>
+
       <!-- Menú (en móvil se oculta y aparece con el botón hamburguesa) -->
       <nav class="nav__links" id="navLinks">
         <a href="#servicios">Servicios</a>
@@ -27,11 +32,6 @@
         <a href="#confianza">Por qué nosotros</a>
         <a href="#contacto" class="nav__cta">Cotizar evento</a>
       </nav>
-
-      <!-- Botón hamburguesa, solo visible en móvil -->
-      <button class="nav__toggle" id="navToggle" aria-label="Abrir menú">
-        <span></span><span></span><span></span>
-      </button>
     </div>
   </header>
 
@@ -49,9 +49,32 @@
       </div>
     </div>
 
-    <!-- Imagen principal: tu logo real -->
-    <div class="hero__logo-wrap" aria-hidden="false">
-      <img src="assets/logo.png" alt="Logo Producciones M&K" class="hero__logo">
+    <!-- Carrusel de imágenes: fotomatón espejo y cabina 360° en eventos reales -->
+    <div class="hero__carousel" id="heroCarousel" aria-hidden="false">
+      <div class="carousel__slide is-active">
+        <div class="carousel__placeholder">
+          <span class="carousel__icon">🪞</span>
+          <span class="carousel__label">Fotomatón Espejo en boda</span>
+        </div>
+      </div>
+      <div class="carousel__slide">
+        <div class="carousel__placeholder">
+          <span class="carousel__icon">🎥</span>
+          <span class="carousel__label">Cabina 360° en cumpleaños</span>
+        </div>
+      </div>
+      <div class="carousel__slide">
+        <div class="carousel__placeholder">
+          <span class="carousel__icon">🪞</span>
+          <span class="carousel__label">Invitados imprimiendo su foto</span>
+        </div>
+      </div>
+      <div class="carousel__slide">
+        <div class="carousel__placeholder">
+          <span class="carousel__icon">🎥</span>
+          <span class="carousel__label">Video 360° en evento corporativo</span>
+        </div>
+      </div>
     </div>
   </section>
 
