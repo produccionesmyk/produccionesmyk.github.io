@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Producciones M&K | Fotomatón Espejo y Cabina 360° en Managua</title>
+  <meta name="description" content="Fotomatón espejo con impresión instantánea y cabina 360° para bodas, cumpleaños, comuniones y eventos corporativos en Managua, Nicaragua.">
+
+  <!-- Fuentes de Google Fonts: una para títulos (con carácter) y otra para texto (fácil de leer) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600;9..144,700&family=Work+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+
+  <!-- Nuestro archivo de estilos -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- ============ BARRA DE NAVEGACIÓN ============ -->
+  <header class="nav">
+    <div class="nav__inner">
+      <a href="#inicio" class="nav__logo">Producciones <span>M&K</span></a>
+
+      <!-- Menú (en móvil se oculta y aparece con el botón hamburguesa) -->
+      <nav class="nav__links" id="navLinks">
+        <a href="#servicios">Servicios</a>
+        <a href="#galeria">Galería</a>
+        <a href="#confianza">Por qué nosotros</a>
+        <a href="#contacto" class="nav__cta">Cotizar evento</a>
+      </nav>
+
+      <!-- Botón hamburguesa, solo visible en móvil -->
+      <button class="nav__toggle" id="navToggle" aria-label="Abrir menú">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- ============ HERO (primera pantalla) ============ -->
+  <section class="hero" id="inicio">
+    <div class="hero__flash" aria-hidden="true"></div> <!-- efecto de destello de flash -->
+
+    <div class="hero__content">
+      <p class="hero__eyebrow">Managua, Nicaragua</p>
+      <h1 class="hero__title">El momento se vive una vez.<br>La foto queda para siempre.</h1>
+      <p class="hero__subtitle">Fotomatón espejo con impresión al instante y cabina 360° en video, para que cada invitado se lleve un recuerdo real de tu evento.</p>
+      <div class="hero__actions">
+        <a href="#contacto" class="btn btn--primary">Cotizar mi evento</a>
+        <a href="#servicios" class="btn btn--ghost">Ver servicios</a>
+      </div>
+    </div>
+
+    <!-- Elemento firma: fotos instantáneas "esparcidas" tipo polaroid -->
+    <div class="hero__polaroids" aria-hidden="true">
+      <div class="polaroid polaroid--1"><div class="polaroid__img"></div></div>
+      <div class="polaroid polaroid--2"><div class="polaroid__img"></div></div>
+      <div class="polaroid polaroid--3"><div class="polaroid__img"></div></div>
+    </div>
+  </section>
+
+  <!-- ============ SERVICIOS ============ -->
+  <section class="servicios" id="servicios">
+    <div class="section__head">
+      <p class="section__eyebrow">Nuestros equipos</p>
+      <h2>Dos formas de capturar tu evento</h2>
+    </div>
+
+    <div class="servicios__grid">
+      <article class="card">
+        <div class="card__icon">🪞</div>
+        <h3>Fotomatón Espejo</h3>
+        <p>Un espejo interactivo que guía a tus invitados, toma fotos con filtros divertidos y las imprime al instante para que se las lleven esa misma noche.</p>
+        <ul class="card__list">
+          <li>Impresiones ilimitadas</li>
+          <li>Props y fondo personalizado</li>
+          <li>Operador incluido durante el evento</li>
+        </ul>
+      </article>
+
+      <article class="card">
+        <div class="card__icon">🎥</div>
+        <h3>Cabina 360°</h3>
+        <p>Tus invitados se paran en la plataforma giratoria y una cámara los graba en video de 360°, en cámara lenta, con música y efectos.</p>
+        <ul class="card__list">
+          <li>Video listo para compartir en redes</li>
+          <li>Iluminación profesional incluida</li>
+          <li>Ideal para bodas, XV años y eventos corporativos</li>
+        </ul>
+      </article>
+    </div>
+  </section>
+
+  <!-- ============ CONFIANZA / POR QUÉ NOSOTROS ============ -->
+  <section class="confianza" id="confianza">
+    <div class="section__head">
+      <p class="section__eyebrow">Por qué elegirnos</p>
+      <h2>Confianza de principio a fin</h2>
+    </div>
+
+    <div class="confianza__grid">
+      <div class="stat">
+        <span class="stat__num">100%</span>
+        <span class="stat__label">Eventos entregados a tiempo</span>
+      </div>
+      <div class="stat">
+        <span class="stat__num">+50</span>
+        <span class="stat__label">Eventos en Managua</span>
+      </div>
+      <div class="stat">
+        <span class="stat__num">24h</span>
+        <span class="stat__label">Tiempo de respuesta a cotizaciones</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ GALERÍA (placeholder, luego se reemplaza con fotos reales) ============ -->
+  <section class="galeria" id="galeria">
+    <div class="section__head">
+      <p class="section__eyebrow">Momentos capturados</p>
+      <h2>Galería</h2>
+    </div>
+    <div class="galeria__grid">
+      <div class="galeria__item"></div>
+      <div class="galeria__item"></div>
+      <div class="galeria__item"></div>
+      <div class="galeria__item"></div>
+      <div class="galeria__item"></div>
+      <div class="galeria__item"></div>
+    </div>
+    <p class="galeria__nota">*Estas casillas son marcadores de posición — cuando tengas fotos reales de eventos, las cambiamos aquí.</p>
+  </section>
+
+  <!-- ============ CONTACTO + REDES SOCIALES ============ -->
+  <section class="contacto" id="contacto">
+    <div class="contacto__box">
+      <h2>Hagamos memorable tu evento</h2>
+      <p>Escríbenos y te respondemos con disponibilidad y precio en menos de 24 horas.</p>
+
+      <div class="contacto__info">
+        <a href="mailto:info@produccionesmyk.com">info@produccionesmyk.com</a>
+        <a href="https://wa.me/50500000000" target="_blank" rel="noopener">WhatsApp: +505 0000 0000</a>
+      </div>
+
+      <!-- Enlaces a redes sociales -->
+      <div class="social">
+        <a href="https://instagram.com/produccionesmyk" target="_blank" rel="noopener" aria-label="Instagram" class="social__link">
+          <svg viewBox="0 0 24 24" width="22" height="22"><path fill="currentColor" d="M12 2.2c3.2 0 3.6 0 4.9.07 1.2.06 2 .24 2.6.5.7.3 1.2.6 1.7 1.1.5.5.9 1 1.1 1.7.3.6.4 1.4.5 2.6.1 1.3.1 1.7.1 4.9s0 3.6-.1 4.9c-.1 1.2-.2 2-.5 2.6-.3.7-.6 1.2-1.1 1.7-.5.5-1 .9-1.7 1.1-.6.3-1.4.4-2.6.5-1.3.1-1.7.1-4.9.1s-3.6 0-4.9-.1c-1.2-.1-2-.2-2.6-.5-.7-.3-1.2-.6-1.7-1.1-.5-.5-.9-1-1.1-1.7-.3-.6-.4-1.4-.5-2.6C2.2 15.6 2.2 15.2 2.2 12s0-3.6.1-4.9c.1-1.2.2-2 .5-2.6.3-.7.6-1.2 1.1-1.7.5-.5 1-.9 1.7-1.1.6-.3 1.4-.4 2.6-.5C8.4 2.2 8.8 2.2 12 2.2m0 1.8c-3.1 0-3.5 0-4.7.07-1 .05-1.6.2-1.9.34-.5.19-.8.42-1.2.75-.33.33-.56.7-.75 1.2-.14.4-.3 1-.34 1.9C3.02 8.5 3 8.9 3 12s0 3.5.07 4.7c.05 1 .2 1.6.34 1.9.19.5.42.8.75 1.2.33.33.7.56 1.2.75.4.14 1 .3 1.9.34 1.2.07 1.6.07 4.7.07s3.5 0 4.7-.07c1-.05 1.6-.2 1.9-.34.5-.19.8-.42 1.2-.75.33-.33.56-.7.75-1.2.14-.4.3-1 .34-1.9.07-1.2.07-1.6.07-4.7s0-3.5-.07-4.7c-.05-1-.2-1.6-.34-1.9a3.1 3.1 0 0 0-.75-1.2 3.1 3.1 0 0 0-1.2-.75c-.4-.14-1-.3-1.9-.34-1.2-.07-1.6-.07-4.7-.07M12 7a5 5 0 1 1 0 10 5 5 0 0 1 0-10m0 1.8a3.2 3.2 0 1 0 0 6.4 3.2 3.2 0 0 0 0-6.4m5.2-2.9a1.2 1.2 0 1 1 0 2.4 1.2 1.2 0 0 1 0-2.4"/></svg>
+        </a>
+        <a href="https://facebook.com/produccionesmyk" target="_blank" rel="noopener" aria-label="Facebook" class="social__link">
+          <svg viewBox="0 0 24 24" width="22" height="22"><path fill="currentColor" d="M13.5 21v-7.6h2.6l.4-3h-3v-1.9c0-.87.24-1.46 1.5-1.46h1.6V4.4c-.28-.04-1.24-.12-2.35-.12-2.33 0-3.92 1.42-3.92 4.03v2.09H7.7v3h2.65V21h3.15Z"/></svg>
+        </a>
+        <a href="https://tiktok.com/@produccionesmyk" target="_blank" rel="noopener" aria-label="TikTok" class="social__link">
+          <svg viewBox="0 0 24 24" width="22" height="22"><path fill="currentColor" d="M16.6 2h-3.1v13.7c0 1.4-1.1 2.5-2.5 2.5a2.5 2.5 0 0 1-2.5-2.5c0-1.4 1.1-2.5 2.5-2.5.28 0 .55.05.8.13V10.2a5.7 5.7 0 0 0-.8-.06 5.6 5.6 0 1 0 5.6 5.6V8.9a7.5 7.5 0 0 0 4.4 1.4V7.2a4.4 4.4 0 0 1-4.4-4.4V2Z"/></svg>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ PIE DE PÁGINA ============ -->
+  <footer class="footer">
+    <p>© 2026 Producciones M&K · Managua, Nicaragua</p>
+  </footer>
+
+  <!-- Nuestro archivo de interactividad (menú móvil) -->
+  <script src="script.js"></script>
+</body>
+</html>
