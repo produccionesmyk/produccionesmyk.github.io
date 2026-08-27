@@ -3,13 +3,13 @@
    Cambia estos valores y se actualiza todo el sitio.
 ======================================================= */
 :root {
-  --color-bg: #201319;          /* fondo principal: ciruela oscura, ambiente de fiesta nocturna */
-  --color-bg-alt: #2e1a22;      /* fondo secundario, un poco más claro */
-  --color-card: #3a1f28;        /* fondo de tarjetas */
-  --color-text: #f5ede4;        /* texto principal: marfil cálido */
-  --color-text-muted: #cbb9b4;  /* texto secundario */
-  --color-gold: #d9a544;        /* acento dorado: elegancia y confianza */
-  --color-flash: #fff8ec;       /* blanco cálido, para el efecto "flash" */
+  --color-bg: #0d0d0d;          /* fondo principal: negro, elegante y de mucho contraste */
+  --color-bg-alt: #161616;      /* fondo secundario, un poco más claro */
+  --color-card: #1e1e1e;        /* fondo de tarjetas */
+  --color-text: #ffffff;        /* texto principal: blanco, para contraste fuerte */
+  --color-text-muted: #c9c9c9;  /* texto secundario, gris claro */
+  --color-gold: #ffc700;        /* acento amarillo: el color protagonista de la marca */
+  --color-flash: #ffffff;       /* blanco, para el efecto "flash" */
 
   --font-display: "Fraunces", serif;
   --font-body: "Work Sans", sans-serif;
@@ -61,7 +61,7 @@ section { padding: 96px 24px; }
 .btn:hover { transform: translateY(-2px); }
 
 .btn--primary { background: var(--color-gold); color: #201319; }
-.btn--ghost { border: 1px solid rgba(245,237,228,0.35); color: var(--color-text); }
+.btn--ghost { border: 1px solid rgba(255,255,255,0.35); color: var(--color-text); }
 
 /* =======================================================
    NAVEGACIÓN
@@ -72,7 +72,7 @@ section { padding: 96px 24px; }
   z-index: 50;
   background: rgba(32,19,25,0.85);
   backdrop-filter: blur(8px);
-  border-bottom: 1px solid rgba(245,237,228,0.08);
+  border-bottom: 1px solid rgba(255,255,255,0.08);
 }
 .nav__inner {
   max-width: var(--max-width);
@@ -84,6 +84,7 @@ section { padding: 96px 24px; }
 }
 .nav__logo { font-family: var(--font-display); font-size: 1.25rem; }
 .nav__logo span { color: var(--color-gold); }
+.nav__logo-img { height: 44px; display: block; }
 
 .nav__links { display: flex; align-items: center; gap: 32px; }
 .nav__links a { font-size: 0.95rem; color: var(--color-text-muted); }
@@ -136,33 +137,17 @@ section { padding: 96px 24px; }
 .hero__subtitle { color: var(--color-text-muted); font-size: 1.1rem; max-width: 480px; margin-bottom: 32px; }
 .hero__actions { display: flex; gap: 16px; flex-wrap: wrap; }
 
-/* Elemento firma: fotos "polaroid" esparcidas a la derecha del hero */
-.hero__polaroids {
+/* Imagen principal del hero: el logo real de la marca */
+.hero__logo-wrap {
   position: absolute;
   right: 6%;
   top: 50%;
   transform: translateY(-50%);
-  width: 320px;
-  height: 380px;
+  width: 340px;
   display: none; /* se activa en pantallas grandes, ver media query */
+  filter: drop-shadow(0 20px 40px rgba(0,0,0,0.5));
 }
-.polaroid {
-  position: absolute;
-  width: 190px;
-  background: #fffaf2;
-  padding: 12px 12px 34px;
-  border-radius: 4px;
-  box-shadow: 0 20px 40px rgba(0,0,0,0.4);
-}
-.polaroid__img {
-  width: 100%;
-  aspect-ratio: 1;
-  background: linear-gradient(135deg, #d9a544, #3a1f28);
-  border-radius: 2px;
-}
-.polaroid--1 { top: 0; left: 20px; transform: rotate(-8deg); }
-.polaroid--2 { top: 90px; left: 110px; transform: rotate(6deg); z-index: 2; }
-.polaroid--3 { top: 210px; left: 10px; transform: rotate(4deg); }
+.hero__logo { width: 100%; height: auto; display: block; }
 
 /* =======================================================
    SERVICIOS
@@ -178,7 +163,7 @@ section { padding: 96px 24px; }
   background: var(--color-card);
   border-radius: var(--radius);
   padding: 36px;
-  border: 1px solid rgba(245,237,228,0.06);
+  border: 1px solid rgba(255,255,255,0.06);
 }
 .card__icon { font-size: 2rem; margin-bottom: 16px; }
 .card h3 { font-size: 1.4rem; margin-bottom: 12px; }
@@ -247,13 +232,14 @@ section { padding: 96px 24px; }
 .contacto__box p { color: var(--color-text-muted); margin-bottom: 28px; }
 .contacto__info { display: flex; flex-direction: column; gap: 8px; margin-bottom: 32px; }
 .contacto__info a { color: var(--color-gold); font-weight: 600; }
+.contacto__direccion { color: var(--color-text-muted); font-size: 0.9rem; margin-top: 4px; }
 
 .social { display: flex; justify-content: center; gap: 18px; }
 .social__link {
   width: 44px; height: 44px;
   display: flex; align-items: center; justify-content: center;
   border-radius: 50%;
-  border: 1px solid rgba(245,237,228,0.2);
+  border: 1px solid rgba(255,255,255,0.2);
   transition: background 0.15s ease, transform 0.15s ease;
 }
 .social__link:hover { background: var(--color-gold); color: #201319; transform: translateY(-2px); }
@@ -266,14 +252,14 @@ section { padding: 96px 24px; }
   padding: 32px 24px;
   color: var(--color-text-muted);
   font-size: 0.85rem;
-  border-top: 1px solid rgba(245,237,228,0.08);
+  border-top: 1px solid rgba(255,255,255,0.08);
 }
 
 /* =======================================================
    RESPONSIVE
 ======================================================= */
 @media (min-width: 900px) {
-  .hero__polaroids { display: block; }
+  .hero__logo-wrap { display: block; }
 }
 
 @media (max-width: 780px) {
@@ -287,7 +273,7 @@ section { padding: 96px 24px; }
     padding: 24px;
     gap: 20px;
     display: none;
-    border-bottom: 1px solid rgba(245,237,228,0.08);
+    border-bottom: 1px solid rgba(255,255,255,0.08);
   }
   .nav__links.is-open { display: flex; }
   .nav__toggle { display: flex; }
