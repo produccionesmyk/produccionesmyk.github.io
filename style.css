@@ -64,34 +64,49 @@ section { padding: 96px 24px; }
 .btn--ghost { border: 1px solid rgba(255,255,255,0.35); color: var(--color-text); }
 
 /* =======================================================
-   NAVEGACIÓN
+   BANNER DEL LOGO (arriba de todo, se desplaza con la página)
+======================================================= */
+.brand-banner {
+  text-align: center;
+  padding: 20px 24px 16px;
+  background: var(--color-bg);
+}
+.brand-banner__logo { display: block; width: 100%; max-width: 320px; margin: 0 auto; }
+.brand-banner__img { width: 100%; height: auto; display: block; }
+.brand-banner__slogan {
+  color: var(--color-gold);
+  font-family: var(--font-display);
+  font-size: 1rem;
+  letter-spacing: 0.03em;
+  margin-top: 10px;
+}
+
+/* =======================================================
+   NAVEGACIÓN (barra delgada, de ~2cm, fija al hacer scroll)
 ======================================================= */
 .nav {
   position: sticky;
   top: 0;
   z-index: 50;
-  background: rgba(32,19,25,0.85);
+  height: 76px; /* ~2cm de grosor */
+  display: flex;
+  align-items: center;
+  background: rgba(32,19,25,0.92);
   backdrop-filter: blur(8px);
   border-bottom: 1px solid rgba(255,255,255,0.08);
 }
 .nav__inner {
+  width: 100%;
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 0 24px;
+  position: relative;
   display: flex;
-  flex-direction: column;
   align-items: center;
-  padding: 20px 24px 0;
-}
-.nav__logo { display: block; width: 100%; max-width: 320px; margin: 0 auto; }
-.nav__logo-img { width: 100%; height: auto; display: block; }
-.nav__slogan {
-  color: var(--color-gold);
-  font-family: var(--font-display);
-  font-size: 1rem;
-  letter-spacing: 0.03em;
-  margin: 10px 0 14px;
-  text-align: center;
+  justify-content: center;
 }
 
-.nav__links { display: flex; align-items: center; justify-content: center; gap: 32px; flex-wrap: wrap; padding: 0 24px 14px; max-width: var(--max-width); margin: 0 auto; }
+.nav__links { display: flex; align-items: center; justify-content: center; gap: 32px; flex-wrap: wrap; }
 .nav__links a { font-size: 0.95rem; color: var(--color-text-muted); }
 .nav__links a:hover { color: var(--color-text); }
 .nav__cta {
@@ -105,7 +120,8 @@ section { padding: 96px 24px; }
   display: none;
   position: absolute;
   right: 24px;
-  top: 22px;
+  top: 50%;
+  transform: translateY(-50%);
   flex-direction: column;
   gap: 5px;
   background: none;
@@ -113,7 +129,6 @@ section { padding: 96px 24px; }
   cursor: pointer;
 }
 .nav__toggle span { width: 24px; height: 2px; background: var(--color-text); }
-.nav__inner { position: relative; }
 
 /* =======================================================
    HERO
