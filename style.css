@@ -78,8 +78,9 @@ section { padding: 96px 24px; }
   display: flex;
   flex-direction: column;
   align-items: center;
+  padding: 20px 24px 0;
 }
-.nav__logo { display: block; width: 100%; }
+.nav__logo { display: block; width: 100%; max-width: 320px; margin: 0 auto; }
 .nav__logo-img { width: 100%; height: auto; display: block; }
 .nav__slogan {
   color: var(--color-gold);
