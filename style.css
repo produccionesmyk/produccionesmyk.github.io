@@ -75,19 +75,22 @@ section { padding: 96px 24px; }
   border-bottom: 1px solid rgba(255,255,255,0.08);
 }
 .nav__inner {
-  max-width: var(--max-width);
-  margin: 0 auto;
-  padding: 14px 24px 10px;
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 10px;
 }
-.nav__logo { font-family: var(--font-display); font-size: 1.25rem; }
-.nav__logo span { color: var(--color-gold); }
-.nav__logo-img { height: 76px; display: block; margin: 0 auto; }
+.nav__logo { display: block; width: 100%; }
+.nav__logo-img { width: 100%; height: auto; display: block; }
+.nav__slogan {
+  color: var(--color-gold);
+  font-family: var(--font-display);
+  font-size: 1rem;
+  letter-spacing: 0.03em;
+  margin: 10px 0 14px;
+  text-align: center;
+}
 
-.nav__links { display: flex; align-items: center; justify-content: center; gap: 32px; flex-wrap: wrap; }
+.nav__links { display: flex; align-items: center; justify-content: center; gap: 32px; flex-wrap: wrap; padding: 0 24px 14px; max-width: var(--max-width); margin: 0 auto; }
 .nav__links a { font-size: 0.95rem; color: var(--color-text-muted); }
 .nav__links a:hover { color: var(--color-text); }
 .nav__cta {
@@ -169,23 +172,11 @@ section { padding: 96px 24px; }
   transition: opacity 1s ease;
 }
 .carousel__slide.is-active { opacity: 1; }
-.carousel__placeholder {
+.carousel__img {
   width: 100%;
   height: 100%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  gap: 16px;
-  background: linear-gradient(160deg, var(--color-card), var(--color-bg-alt));
-  border: 1px solid rgba(255,255,255,0.08);
-}
-.carousel__icon { font-size: 3rem; }
-.carousel__label {
-  color: var(--color-text-muted);
-  font-size: 0.9rem;
-  text-align: center;
-  padding: 0 24px;
+  object-fit: cover;
+  display: block;
 }
 
 
@@ -252,6 +243,13 @@ section { padding: 96px 24px; }
   aspect-ratio: 4/5;
   background: linear-gradient(160deg, var(--color-card), var(--color-bg-alt));
   border-radius: 10px;
+  overflow: hidden;
+}
+.galeria__img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
 }
 .galeria__nota {
   text-align: center;
