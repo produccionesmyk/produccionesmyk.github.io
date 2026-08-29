@@ -65,34 +65,46 @@ section { padding: 96px 24px; }
 .btn--ghost { border: 1px solid rgba(255,255,255,0.35); color: var(--color-text); }
 
 /* =======================================================
-   NAVEGACIÓN (fondo blanco, fija al hacer scroll)
+   BARRA FIJA (solo logo, 2cm de alto, blanca, sticky)
 ======================================================= */
 .nav {
   position: sticky;
   top: 0;
   z-index: 50;
+  height: 76px; /* 76px ≈ 2cm de alto, el banner completo mide esto */
   background: #ffffff;
   border-bottom: 1px solid rgba(0,0,0,0.08);
-  padding: 14px 24px 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
-.nav__inner {
+.nav__logo { display: block; height: 100%; display: flex; align-items: center; }
+.nav__logo-img { height: 60px; width: auto; display: block; } /* un poco menor a 76px para dejar aire arriba/abajo */
+
+/* =======================================================
+   FRANJA DE MENÚ (eslogan + links, no fija, se desplaza con la página)
+======================================================= */
+.subnav {
+  background: #ffffff;
+  border-bottom: 1px solid rgba(0,0,0,0.08);
+  padding: 14px 24px;
+}
+.subnav__inner {
   max-width: var(--max-width);
   margin: 0 auto;
   position: relative;
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 6px;
+  gap: 10px;
 }
-.nav__logo { display: block; }
-.nav__logo-img { height: 76px; width: auto; display: block; } /* 76px ≈ 2cm de alto, sin distorsión */
 .nav__slogan {
   color: var(--color-gold-dark);
   font-family: var(--font-display);
   font-weight: 600;
   font-size: 1.05rem;
   letter-spacing: 0.02em;
-  margin: 2px 0 6px;
+  margin: 0;
 }
 
 .nav__links { display: flex; align-items: center; justify-content: center; gap: 32px; flex-wrap: wrap; }
@@ -109,7 +121,7 @@ section { padding: 96px 24px; }
   display: none;
   position: absolute;
   right: 0;
-  top: 76px;
+  top: 0;
   flex-direction: column;
   gap: 5px;
   background: none;

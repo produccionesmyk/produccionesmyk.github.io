@@ -15,10 +15,14 @@
 </head>
 <body>
 
-  <!-- ============ BARRA DE NAVEGACIÓN (fondo blanco, fija al hacer scroll) ============ -->
+  <!-- ============ BARRA FIJA (solo logo, 2cm de alto, blanca, sticky) ============ -->
   <header class="nav">
-    <div class="nav__inner">
-      <a href="#inicio" class="nav__logo"><img src="assets/logo-banner.png" alt="Producciones M&K" class="nav__logo-img"></a>
+    <a href="#inicio" class="nav__logo"><img src="assets/logo-banner.png" alt="Producciones M&K" class="nav__logo-img"></a>
+  </header>
+
+  <!-- ============ FRANJA DE MENÚ (no fija, se desplaza con la página) ============ -->
+  <div class="subnav">
+    <div class="subnav__inner">
       <p class="nav__slogan">Capturamos momentos, creamos recuerdos.</p>
 
       <!-- Botón hamburguesa, solo visible en móvil -->
@@ -34,7 +38,7 @@
         <a href="#contacto" class="nav__cta">Cotizar evento</a>
       </nav>
     </div>
-  </header>
+  </div>
 
   <!-- ============ HERO (primera pantalla) ============ -->
   <section class="hero" id="inicio">
