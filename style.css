@@ -167,7 +167,14 @@ section { padding: 96px 24px; }
 }
 .hero__title { font-size: clamp(2.2rem, 5vw, 3.6rem); margin-bottom: 20px; }
 .hero__subtitle { color: var(--color-text-muted); font-size: 1.1rem; max-width: 480px; margin-bottom: 32px; }
-.hero__actions { display: flex; gap: 16px; flex-wrap: wrap; }
+.hero__foto { margin: 0; }
+.hero__foto img {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: var(--radius);
+  box-shadow: 0 16px 40px rgba(0,0,0,0.55);
+}
 
 /* Video del hero: cabina 360° en acción (formato vertical 9:16) */
 .hero__video {
@@ -553,7 +560,7 @@ section { padding: 96px 24px; }
    RESPONSIVE
 ======================================================= */
 @media (min-width: 900px) {
-  .hero { flex-direction: row; align-items: center; justify-content: flex-start; }
+  .hero { flex-direction: row; align-items: center; justify-content: flex-start; padding-right: calc(6% + 352px); } /* deja sitio al video */
   .hero__video {
     position: absolute;
     right: 6%;
