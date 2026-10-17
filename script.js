@@ -13,16 +13,26 @@ navLinks.querySelectorAll('a').forEach(link => {
   });
 });
 
-// Carrusel del hero: cambia de imagen cada 4 segundos
-const slides = document.querySelectorAll('#heroCarousel .carousel__slide');
-let currentSlide = 0;
+// Video del hero: botón para pausar y reproducir
+const heroVideo = document.querySelector('#heroVideo video');
+const heroToggle = document.getElementById('heroVideoToggle');
 
-if (slides.length > 0) {
-  setInterval(() => {
-    slides[currentSlide].classList.remove('is-active');
-    currentSlide = (currentSlide + 1) % slides.length;
-    slides[currentSlide].classList.add('is-active');
-  }, 4000);
+if (heroVideo && heroToggle) {
+  const syncToggle = () => {
+    const paused = heroVideo.paused;
+    heroToggle.classList.toggle('is-paused', paused);
+    heroToggle.setAttribute('aria-label', paused ? 'Reproducir video' : 'Pausar video');
+  };
+
+  // Si la persona tiene activado "reducir movimiento", el video no arranca solo
+  if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) heroVideo.pause();
+
+  heroToggle.addEventListener('click', () => {
+    if (heroVideo.paused) heroVideo.play(); else heroVideo.pause();
+  });
+  heroVideo.addEventListener('play', syncToggle);
+  heroVideo.addEventListener('pause', syncToggle);
+  syncToggle();
 }
 
 // Visor de fotos: al hacer clic en una foto de la galería se abre en grande

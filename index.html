@@ -19,7 +19,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600;9..144,700&family=Work+Sans:wght@400;500;600&display=swap" rel="stylesheet">
 
   <!-- Nuestro archivo de estilos -->
-  <link rel="stylesheet" href="style.css?v=20261018">  <!-- Cloudflare Web Analytics -->
+  <link rel="stylesheet" href="style.css?v=20261019">  <!-- Cloudflare Web Analytics -->
   <script type='module' src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "580ab2401219431e8d351046eb8cf425"}'></script>
   <!-- End Cloudflare Web Analytics -->
 </head>
@@ -64,20 +64,12 @@
       </div>
     </div>
 
-    <!-- Carrusel de imágenes: fotomatón espejo y cabina 360° -->
-    <div class="hero__carousel" id="heroCarousel" aria-hidden="false">
-      <div class="carousel__slide is-active">
-        <img src="assets/fotos/foto-04.jpg" alt="Grupo de amigos con lentes divertidos y una corona en el fotomatón" class="carousel__img" width="1000" height="1332">
-      </div>
-      <div class="carousel__slide">
-        <img src="assets/fotos/foto-09.jpg" alt="Grupo de amigas con sombreros de colores y lentes LED" class="carousel__img" width="1000" height="1332" loading="lazy">
-      </div>
-      <div class="carousel__slide">
-        <img src="assets/fotos/foto-03.jpg" alt="Tres amigos con lentes LED de colores" class="carousel__img" width="1000" height="1332" loading="lazy">
-      </div>
-      <div class="carousel__slide">
-        <img src="assets/fotos/foto-10.jpg" alt="Invitada con antifaz de plumas haciendo la señal de paz" class="carousel__img" width="1000" height="1332" loading="lazy">
-      </div>
+    <!-- Video de la cabina 360° en acción (sin sonido, en bucle, se reproduce solo) -->
+    <div class="hero__video" id="heroVideo">
+      <video autoplay muted loop playsinline preload="metadata" poster="video-hero-poster.jpg" aria-label="Invitados bailando en la cabina 360° de Producciones M&amp;K durante una fiesta">
+        <source src="video-hero.mp4" type="video/mp4">
+      </video>
+      <button type="button" class="hero__video-toggle" id="heroVideoToggle" aria-label="Pausar video"></button>
     </div>
   </section>
 
@@ -379,6 +371,6 @@
   </div>
 
   <!-- Nuestro archivo de interactividad (menú móvil, carrusel y visor de fotos) -->
-  <script src="script.js?v=20261018"></script>
+  <script src="script.js?v=20261019"></script>
 </body>
 </html>
