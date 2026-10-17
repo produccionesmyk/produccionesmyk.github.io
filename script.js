@@ -104,7 +104,33 @@ if (pkTrack && pkPrev && pkNext) {
 
   pkPrev.addEventListener('click', () => pkTrack.scrollBy({ left: -stepSize(), behavior: 'smooth' }));
   pkNext.addEventListener('click', () => pkTrack.scrollBy({ left: stepSize(), behavior: 'smooth' }));
-  pkTrack.addEventListener('scroll', updateArrows, { passive: true });
-  window.addEventListener('resize', updateArrows);
-  updateArrows();
+  // Puntos indicadores: uno por paquete; se iluminan los que se ven en pantalla
+  const pkDots = document.getElementById('pkDots');
+  const cards = Array.from(pkTrack.querySelectorAll('.paquete'));
+  const dots = cards.map((card, i) => {
+    const dot = document.createElement('button');
+    dot.type = 'button';
+    dot.className = 'paquetes__dot';
+    dot.setAttribute('aria-label', 'Ver paquete ' + (i + 1) + ': ' + card.querySelector('.paquete__nombre').textContent);
+    dot.addEventListener('click', () => {
+      const delta = card.getBoundingClientRect().left - pkTrack.getBoundingClientRect().left;
+      pkTrack.scrollTo({ left: pkTrack.scrollLeft + delta, behavior: 'smooth' });
+    });
+    pkDots.appendChild(dot);
+    return dot;
+  });
+
+  const updateDots = () => {
+    const t = pkTrack.getBoundingClientRect();
+    cards.forEach((card, i) => {
+      const r = card.getBoundingClientRect();
+      const visible = Math.min(r.right, t.right) - Math.max(r.left, t.left);
+      dots[i].classList.toggle('is-visible', visible > r.width * 0.5);
+    });
+  };
+
+  const refresh = () => { updateArrows(); updateDots(); };
+  pkTrack.addEventListener('scroll', refresh, { passive: true });
+  window.addEventListener('resize', refresh);
+  refresh();
 }

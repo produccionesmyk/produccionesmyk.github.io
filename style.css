@@ -239,6 +239,23 @@ section { padding: 96px 24px; }
 .paquetes__arrow--prev { left: 6px; }
 .paquetes__arrow--next { right: 6px; }
 
+/* Puntos indicadores del carrusel */
+.paquetes__dots { display: flex; justify-content: center; gap: 10px; margin-top: 8px; flex-wrap: wrap; }
+.paquetes__dot {
+  width: 12px;
+  height: 12px;
+  padding: 0;
+  border-radius: 100px;
+  border: none;
+  background: rgba(255,255,255,0.25);
+  cursor: pointer;
+  transition: background 0.2s ease, width 0.2s ease;
+}
+.paquetes__dot:hover { background: rgba(255,255,255,0.5); }
+.paquetes__dot.is-visible { background: var(--color-gold); width: 28px; }
+.paquetes__dot:focus-visible { outline: 2px solid var(--color-gold); outline-offset: 3px; }
+.paquetes__hint { text-align: center; color: var(--color-text-muted); font-size: 0.85rem; margin-top: 14px; }
+
 /* Tarjeta de paquete */
 .paquete {
   position: relative;
