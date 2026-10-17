@@ -82,3 +82,29 @@ if (galleryItems.length > 0 && lightbox) {
     if (Math.abs(diff) > 50) showPhoto(diff > 0 ? lbIndex - 1 : lbIndex + 1);
   }, { passive: true });
 }
+
+// Carrusel de paquetes: las flechas mueven una tarjeta a la vez
+const pkTrack = document.getElementById('pkTrack');
+const pkPrev = document.getElementById('pkPrev');
+const pkNext = document.getElementById('pkNext');
+
+if (pkTrack && pkPrev && pkNext) {
+  const stepSize = () => {
+    const card = pkTrack.querySelector('.paquete');
+    const gap = parseFloat(getComputedStyle(pkTrack).columnGap) || 24;
+    return card.offsetWidth + gap;
+  };
+
+  // Apaga la flecha cuando ya no hay más tarjetas hacia ese lado
+  const updateArrows = () => {
+    const max = pkTrack.scrollWidth - pkTrack.clientWidth;
+    pkPrev.disabled = pkTrack.scrollLeft <= 4;
+    pkNext.disabled = pkTrack.scrollLeft >= max - 4;
+  };
+
+  pkPrev.addEventListener('click', () => pkTrack.scrollBy({ left: -stepSize(), behavior: 'smooth' }));
+  pkNext.addEventListener('click', () => pkTrack.scrollBy({ left: stepSize(), behavior: 'smooth' }));
+  pkTrack.addEventListener('scroll', updateArrows, { passive: true });
+  window.addEventListener('resize', updateArrows);
+  updateArrows();
+}

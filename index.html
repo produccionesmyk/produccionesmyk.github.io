@@ -81,70 +81,180 @@
     </div>
   </section>
 
-  <!-- ============ SERVICIOS ============ -->
+  <!-- ============ SERVICIOS: 6 paquetes en carrusel (flechas a los lados) ============ -->
   <section class="servicios" id="servicios">
     <div class="section__head">
-      <p class="section__eyebrow">Nuestros equipos</p>
-      <h2>Dos formas de capturar tu evento</h2>
+      <p class="section__eyebrow">Nuestros paquetes</p>
+      <h2>Elige el paquete ideal para tu evento</h2>
+      <p class="section__sub">Bodas · Quinceaños · Cumpleaños · Eventos empresariales</p>
     </div>
 
-    <div class="servicios__grid">
-      <article class="card">
-        <div class="card__icon">🪞</div>
-        <h3>Fotomatón Espejo</h3>
-        <p>Un espejo interactivo que guía a tus invitados, toma fotos con filtros divertidos y las imprime al instante para que se las lleven esa misma noche.</p>
-        <ul class="card__list">
-          <li>Impresiones ilimitadas</li>
-          <li>Props y fondo personalizado</li>
-          <li>Operador incluido durante el evento</li>
+    <div class="paquetes">
+      <button type="button" class="paquetes__arrow paquetes__arrow--prev" id="pkPrev" aria-label="Paquetes anteriores">&#8249;</button>
+
+      <div class="paquetes__track" id="pkTrack" role="region" aria-label="Paquetes disponibles" tabindex="0">
+      <article class="paquete">
+        
+        <h3 class="paquete__cat">Fotomatón 360°</h3>
+        <div class="paquete__foto"><img src="assets/equipos/fotomaton-360.jpg" alt="Fotomatón 360° de Producciones M&amp;K con plataforma iluminada y aro de luz" width="900" height="1213" loading="lazy"></div>
+        <div class="paquete__head paquete__head--oscuro">
+          <div>
+            <span class="paquete__label">Paquete</span>
+            <h4 class="paquete__nombre">Giro Fiesta</h4>
+            <span class="paquete__horas">2 horas</span>
+          </div>
+          <span class="paquete__precio">$200</span>
+        </div>
+        
+        <p class="paquete__incluye">Incluye</p>
+        <ul class="paquete__lista">
+          <li>Plataforma iluminada de 100 cm (hasta 3 personas)</li>
+          <li>Marco personalizado con tu temática para tus videos</li>
+          <li>Videos al instante por QR y AirDrop</li>
+          <li>QR en las mesas para ver los videos del evento</li>
+          <li>Respaldo de todos los videos para descargar</li>
+          <li>Mesa de accesorios de fiesta y pistola de burbujas</li>
+          <li>Iluminación LED para videos</li>
         </ul>
+        <a class="btn btn--primary paquete__cta" href="https://wa.me/50557034208?text=Hola%2C%20me%20interesa%20el%20paquete%20Giro%20Fiesta%20de%202%20horas" target="_blank" rel="noopener">Reservar este paquete</a>
       </article>
 
-      <article class="card">
-        <div class="card__icon">🎥</div>
-        <h3>Cabina 360°</h3>
-        <p>Tus invitados se paran en la plataforma giratoria y una cámara los graba en video de 360°, en cámara lenta, con música y efectos.</p>
-        <ul class="card__list">
-          <li>Video listo para compartir en redes</li>
-          <li>Iluminación profesional incluida</li>
-          <li>Ideal para bodas, XV años y eventos corporativos</li>
+      <article class="paquete">
+        
+        <h3 class="paquete__cat">Fotomatón 360°</h3>
+        <div class="paquete__foto"><img src="assets/equipos/fotomaton-360.jpg" alt="Fotomatón 360° de Producciones M&amp;K con plataforma iluminada y aro de luz" width="900" height="1213" loading="lazy"></div>
+        <div class="paquete__head">
+          <div>
+            <span class="paquete__label">Paquete</span>
+            <h4 class="paquete__nombre">Giro Premium</h4>
+            <span class="paquete__horas">3 horas</span>
+          </div>
+          <span class="paquete__precio">$280</span>
+        </div>
+        
+        <p class="paquete__incluye">Incluye</p>
+        <ul class="paquete__lista">
+          <li>Plataforma iluminada de 100 cm (hasta 3 personas)</li>
+          <li>Marco personalizado con tu temática para tus videos</li>
+          <li>Videos al instante por QR y AirDrop</li>
+          <li>QR en las mesas para ver los videos del evento</li>
+          <li>Respaldo de todos los videos para descargar</li>
+          <li>Mesa de accesorios de fiesta y pistola de burbujas</li>
+          <li>Iluminación LED para videos</li>
         </ul>
+        <a class="btn btn--primary paquete__cta" href="https://wa.me/50557034208?text=Hola%2C%20me%20interesa%20el%20paquete%20Giro%20Premium%20de%203%20horas" target="_blank" rel="noopener">Reservar este paquete</a>
       </article>
-    </div>
 
-    <!-- Extras incluidos -->
-    <div class="extras">
-      <h3 class="extras__title">Extras que hacen la diferencia</h3>
-      <div class="extras__grid">
-        <div class="extra">
-          <span class="extra__icon" aria-hidden="true">🎩</span>
-          <h4>Props y accesorios</h4>
-          <p>Lentes LED, sombreros, antifaces, collares y más para que todos se animen a posar.</p>
+      <article class="paquete">
+        
+        <h3 class="paquete__cat">Fotomatón Espejo</h3>
+        <div class="paquete__foto paquete__foto--espejo"><img src="assets/equipos/fotomaton-espejo.jpg" alt="Fotomatón espejo de Producciones M&amp;K con marco de luces y mesa de accesorios" width="900" height="1273" loading="lazy"></div>
+        <div class="paquete__head paquete__head--oscuro">
+          <div>
+            <span class="paquete__label">Paquete</span>
+            <h4 class="paquete__nombre">Espejo Mágico</h4>
+            <span class="paquete__horas">2 horas</span>
+          </div>
+          <span class="paquete__precio">$250</span>
         </div>
-        <div class="extra">
-          <span class="extra__icon" aria-hidden="true">🖼️</span>
-          <h4>Diseño personalizado</h4>
-          <p>Marco y fondo con el nombre, la fecha y los colores de tu evento.</p>
+        
+        <p class="paquete__incluye">Incluye</p>
+        <ul class="paquete__lista">
+          <li>Marco personalizado con tu temática para tus fotos</li>
+          <li>Fotos instantáneas ilimitadas</li>
+          <li>Fotos digitales ilimitadas</li>
+          <li>Mesa de accesorios de fiesta y pistola de burbujas</li>
+          <li>Luces de iluminación</li>
+        </ul>
+        <a class="btn btn--primary paquete__cta" href="https://wa.me/50557034208?text=Hola%2C%20me%20interesa%20el%20paquete%20Espejo%20M%C3%A1gico%20de%202%20horas" target="_blank" rel="noopener">Reservar este paquete</a>
+      </article>
+
+      <article class="paquete">
+        
+        <h3 class="paquete__cat">Fotomatón Espejo</h3>
+        <div class="paquete__foto paquete__foto--espejo"><img src="assets/equipos/fotomaton-espejo.jpg" alt="Fotomatón espejo de Producciones M&amp;K con marco de luces y mesa de accesorios" width="900" height="1273" loading="lazy"></div>
+        <div class="paquete__head">
+          <div>
+            <span class="paquete__label">Paquete</span>
+            <h4 class="paquete__nombre">Espejo Estelar</h4>
+            <span class="paquete__horas">3 horas</span>
+          </div>
+          <span class="paquete__precio">$320</span>
         </div>
-        <div class="extra">
-          <span class="extra__icon" aria-hidden="true">📲</span>
-          <h4>Compártelo al instante</h4>
-          <p>Tus invitados reciben sus fotos y videos por código QR o mensaje de texto.</p>
+        
+        <p class="paquete__incluye">Incluye</p>
+        <ul class="paquete__lista">
+          <li>Marco personalizado con tu temática para tus fotos</li>
+          <li>Fotos instantáneas ilimitadas</li>
+          <li>Fotos digitales ilimitadas</li>
+          <li>Mesa de accesorios de fiesta y pistola de burbujas</li>
+          <li>Luces de iluminación</li>
+        </ul>
+        <a class="btn btn--primary paquete__cta" href="https://wa.me/50557034208?text=Hola%2C%20me%20interesa%20el%20paquete%20Espejo%20Estelar%20de%203%20horas" target="_blank" rel="noopener">Reservar este paquete</a>
+      </article>
+
+      <article class="paquete paquete--combo">
+        <span class="paquete__badge">Más popular</span>
+        <h3 class="paquete__cat">Fotomatón 360° + Espejo</h3>
+        <div class="paquete__foto paquete__foto--duo"><img src="assets/equipos/fotomaton-espejo.jpg" alt="Fotomatón espejo de Producciones M&amp;K con marco de luces y mesa de accesorios" width="900" height="1273" loading="lazy"><img src="assets/equipos/fotomaton-360.jpg" alt="Fotomatón 360° de Producciones M&amp;K con plataforma iluminada y aro de luz" width="900" height="1213" loading="lazy"></div>
+        <div class="paquete__head paquete__head--oscuro">
+          <div>
+            <span class="paquete__label">Paquete</span>
+            <h4 class="paquete__nombre">Dúo Fiestero</h4>
+            <span class="paquete__horas">2 horas</span>
+          </div>
+          <span class="paquete__precio">$420</span>
         </div>
+        <p class="paquete__ahorro">Ahorras $30</p>
+        <p class="paquete__incluye">Incluye</p>
+        <ul class="paquete__lista">
+          <li>Plataforma iluminada de 100 cm (hasta 3 personas)</li>
+          <li>Marco personalizado con tu temática para tus videos</li>
+          <li>Videos al instante por QR y AirDrop</li>
+          <li>QR en las mesas para ver los videos del evento</li>
+          <li>Respaldo de todos los videos para descargar</li>
+          <li>Iluminación LED para videos</li>
+          <li>Marco personalizado con tu temática para tus fotos</li>
+          <li>Fotos instantáneas ilimitadas</li>
+          <li>Fotos digitales ilimitadas</li>
+          <li>Luces de iluminación</li>
+          <li>Mesa de accesorios de fiesta y pistola de burbujas</li>
+        </ul>
+        <a class="btn btn--primary paquete__cta" href="https://wa.me/50557034208?text=Hola%2C%20me%20interesa%20el%20paquete%20D%C3%BAo%20Fiestero%20de%202%20horas" target="_blank" rel="noopener">Reservar este paquete</a>
+      </article>
+
+      <article class="paquete paquete--combo">
+        <span class="paquete__badge">Más popular</span>
+        <h3 class="paquete__cat">Fotomatón 360° + Espejo</h3>
+        <div class="paquete__foto paquete__foto--duo"><img src="assets/equipos/fotomaton-espejo.jpg" alt="Fotomatón espejo de Producciones M&amp;K con marco de luces y mesa de accesorios" width="900" height="1273" loading="lazy"><img src="assets/equipos/fotomaton-360.jpg" alt="Fotomatón 360° de Producciones M&amp;K con plataforma iluminada y aro de luz" width="900" height="1213" loading="lazy"></div>
+        <div class="paquete__head">
+          <div>
+            <span class="paquete__label">Paquete</span>
+            <h4 class="paquete__nombre">Experiencia Total</h4>
+            <span class="paquete__horas">3 horas</span>
+          </div>
+          <span class="paquete__precio">$500</span>
+        </div>
+        <p class="paquete__ahorro">Ahorras $100</p>
+        <p class="paquete__incluye">Incluye</p>
+        <ul class="paquete__lista">
+          <li>Plataforma iluminada de 100 cm (hasta 3 personas)</li>
+          <li>Marco personalizado con tu temática para tus videos</li>
+          <li>Videos al instante por QR y AirDrop</li>
+          <li>QR en las mesas para ver los videos del evento</li>
+          <li>Respaldo de todos los videos para descargar</li>
+          <li>Iluminación LED para videos</li>
+          <li>Marco personalizado con tu temática para tus fotos</li>
+          <li>Fotos instantáneas ilimitadas</li>
+          <li>Fotos digitales ilimitadas</li>
+          <li>Luces de iluminación</li>
+          <li>Mesa de accesorios de fiesta y pistola de burbujas</li>
+        </ul>
+        <a class="btn btn--primary paquete__cta" href="https://wa.me/50557034208?text=Hola%2C%20me%20interesa%20el%20paquete%20Experiencia%20Total%20de%203%20horas" target="_blank" rel="noopener">Reservar este paquete</a>
+      </article>
       </div>
-    </div>
 
-    <!-- Tipos de evento -->
-    <div class="eventos">
-      <h3 class="eventos__title">Para cada celebración</h3>
-      <ul class="chips">
-        <li>Bodas</li>
-        <li>XV años</li>
-        <li>Cumpleaños</li>
-        <li>Comuniones</li>
-        <li>Eventos corporativos</li>
-      </ul>
-      <a href="#contacto" class="btn btn--primary">Cotizar mi evento</a>
+      <button type="button" class="paquetes__arrow paquetes__arrow--next" id="pkNext" aria-label="Paquetes siguientes">&#8250;</button>
     </div>
   </section>
 
@@ -244,7 +354,7 @@
         <a href="https://www.facebook.com/share/19FwvxZfPd/" target="_blank" rel="noopener" aria-label="Facebook" class="social__link">
           <svg viewBox="0 0 24 24" width="22" height="22"><path fill="currentColor" d="M13.5 21v-7.6h2.6l.4-3h-3v-1.9c0-.87.24-1.46 1.5-1.46h1.6V4.4c-.28-.04-1.24-.12-2.35-.12-2.33 0-3.92 1.42-3.92 4.03v2.09H7.7v3h2.65V21h3.15Z"/></svg>
         </a>
-        <a href="https://www.tiktok.com/@produccionesmk3" target="_blank" rel="noopener" aria-label="TikTok" class="social__link">
+        <a href="https://www.tiktok.com/@produccionesmyk" target="_blank" rel="noopener" aria-label="TikTok" class="social__link">
           <svg viewBox="0 0 24 24" width="22" height="22"><path fill="currentColor" d="M16.6 2h-3.1v13.7c0 1.4-1.1 2.5-2.5 2.5a2.5 2.5 0 0 1-2.5-2.5c0-1.4 1.1-2.5 2.5-2.5.28 0 .55.05.8.13V10.2a5.7 5.7 0 0 0-.8-.06 5.6 5.6 0 1 0 5.6 5.6V8.9a7.5 7.5 0 0 0 4.4 1.4V7.2a4.4 4.4 0 0 1-4.4-4.4V2Z"/></svg>
         </a>
       </div>
