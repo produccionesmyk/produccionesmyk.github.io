@@ -1,3 +1,18 @@
+// Al abrir la página (o un link compartido) siempre se empieza arriba, sin saltar a una sección
+if ('scrollRestoration' in history) history.scrollRestoration = 'manual';
+if (location.hash) history.replaceState(null, '', location.pathname + location.search);
+window.scrollTo(0, 0);
+
+// Los enlaces del menú bajan a la sección sin ensuciar la dirección (así el link que se copia es siempre el limpio)
+document.querySelectorAll('a[href^="#"]').forEach(link => {
+  link.addEventListener('click', (e) => {
+    const target = document.querySelector(link.getAttribute('href'));
+    if (!target) return;
+    e.preventDefault();
+    target.scrollIntoView({ behavior: 'smooth' });
+  });
+});
+
 // Abre y cierra el menú en pantallas de celular
 const navToggle = document.getElementById('navToggle');
 const navLinks = document.getElementById('navLinks');
