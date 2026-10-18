@@ -582,19 +582,70 @@ section { padding: 96px 24px; }
   .paquetes__arrow--next { right: -26px; }
 }
 
-@media (max-width: 780px) {
-  .nav__links {
-    position: absolute;
-    top: 100%;
-    left: 0;
-    right: 0;
-    background: #ffffff;
-    flex-direction: column;
-    padding: 24px;
-    gap: 20px;
-    display: none;
-    border-bottom: 1px solid rgba(0,0,0,0.08);
-  }
-  .nav__links.is-open { display: flex; }
-  .nav__toggle { display: flex; }
+/* =======================================================
+   CELULAR (menos de 900px): se ve igual que en computadora,
+   pero todo más pequeño y compacto.
+======================================================= */
+@media (max-width: 899px) {
+  section { padding: 40px 14px; }
+  .section__head { margin-bottom: 24px; }
+  .section__head h2 { font-size: 1.5rem; }
+  .section__eyebrow { font-size: 0.65rem; }
+  .section__sub { font-size: 0.8rem; margin-top: 8px; }
+  .btn { padding: 11px 20px; font-size: 0.85rem; }
+
+  /* Barra del logo y menú: siempre visibles, en una fila */
+  .nav { height: 88px; }
+  .nav__logo-img { height: 72px; }
+  .subnav { padding: 8px 14px; }
+  .subnav__inner { gap: 6px; }
+  .nav__slogan { font-size: 0.85rem; text-align: center; }
+  .nav__toggle { display: none; }
+  .nav__links { gap: 18px; flex-wrap: nowrap; }
+  .nav__links a { font-size: 0.85rem; }
+  .nav__cta { padding: 6px 14px; }
+
+  /* Inicio: texto a la izquierda, video a la derecha, como en computadora */
+  .hero { flex-direction: row; align-items: center; justify-content: flex-start; gap: 14px; min-height: 0; padding: 28px 14px; }
+  .hero__content { flex: 1 1 0; min-width: 0; max-width: none; }
+  .hero__eyebrow { font-size: 0.6rem; margin-bottom: 8px; }
+  .hero__title { font-size: 1.3rem; margin-bottom: 10px; }
+  .hero__subtitle { font-size: 0.78rem; line-height: 1.45; margin-bottom: 14px; }
+  .hero__foto img { border-radius: 10px; }
+  .hero__video { flex: 0 0 38%; width: 38%; margin: 0; border-radius: 10px; }
+  .hero__video-toggle { width: 30px; height: 30px; right: 6px; bottom: 6px; font-size: 0.6rem; }
+
+  /* Paquetes: 2 tarjetas a la vez, más compactas */
+  .paquetes__track { gap: 12px; padding: 14px 0 10px; }
+  .paquete { flex-basis: calc((100% - 12px) / 2); padding: 14px 10px 14px; border-radius: 10px; }
+  .paquete__badge { font-size: 0.55rem; padding: 3px 9px; top: -10px; }
+  .paquete__cat { font-size: 0.75rem; margin-bottom: 10px; border-bottom-width: 3px; }
+  .paquete__foto { margin-bottom: 10px; border-radius: 8px; }
+  .paquete__foto--duo img { border-width: 2px; border-radius: 8px; }
+  .paquete__head { padding: 8px 9px; gap: 6px; border-radius: 8px; }
+  .paquete__label { font-size: 0.5rem; letter-spacing: 0.1em; }
+  .paquete__nombre { font-size: 0.78rem; }
+  .paquete__horas { font-size: 0.65rem; }
+  .paquete__precio { font-size: 1.35rem; }
+  .paquete__ahorro { font-size: 0.6rem; padding: 3px 8px; margin-top: 8px; }
+  .paquete__incluye { font-size: 0.75rem; margin: 10px 0 6px; }
+  .paquete__lista { margin-bottom: 12px; }
+  .paquete__lista li { font-size: 0.66rem; gap: 6px; margin-bottom: 5px; line-height: 1.3; }
+  .paquete__lista li::before { width: 13px; height: 13px; font-size: 0.5rem; }
+  .paquete__cta { padding: 9px 6px; font-size: 0.72rem; }
+  .paquetes__arrow { width: 34px; height: 34px; font-size: 1.4rem; top: 120px; }
+  .paquetes__arrow--prev { left: 2px; }
+  .paquetes__arrow--next { right: 2px; }
+  .paquetes__dot { width: 9px; height: 9px; }
+  .paquetes__dot.is-visible { width: 20px; }
+  .paquetes__hint { font-size: 0.7rem; }
+
+  /* Galería: 3 columnas como en computadora */
+  .galeria__grid { grid-template-columns: repeat(3, 1fr); gap: 6px; }
+  .galeria__item { border-radius: 6px; }
+
+  /* Contacto y pie */
+  .contacto__box h2 { font-size: 1.5rem; }
+  .contacto__info { font-size: 0.9rem; }
+  .contacto__direccion { font-size: 0.78rem; }
 }
