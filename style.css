@@ -71,7 +71,7 @@ section { padding: 96px 24px; }
   position: sticky;
   top: 0;
   z-index: 50;
-  height: 76px; /* 76px ≈ 2cm de alto, el banner completo mide esto */
+  height: 112px; /* barra del logo, más grande */
   background: #ffffff;
   border-bottom: 1px solid rgba(0,0,0,0.08);
   display: flex;
@@ -79,7 +79,7 @@ section { padding: 96px 24px; }
   justify-content: center;
 }
 .nav__logo { display: block; height: 100%; display: flex; align-items: center; }
-.nav__logo-img { height: 60px; width: auto; display: block; } /* un poco menor a 76px para dejar aire arriba/abajo */
+.nav__logo-img { height: 92px; width: auto; max-width: 92vw; display: block; }
 
 /* =======================================================
    FRANJA DE MENÚ (eslogan + links, no fija, se desplaza con la página)
