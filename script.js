@@ -13,26 +13,13 @@ navLinks.querySelectorAll('a').forEach(link => {
   });
 });
 
-// Video del hero: botón para pausar y reproducir
+// Video del hero: se reproduce siempre, en bucle y sin pausa
 const heroVideo = document.querySelector('#heroVideo video');
-const heroToggle = document.getElementById('heroVideoToggle');
-
-if (heroVideo && heroToggle) {
-  const syncToggle = () => {
-    const paused = heroVideo.paused;
-    heroToggle.classList.toggle('is-paused', paused);
-    heroToggle.setAttribute('aria-label', paused ? 'Reproducir video' : 'Pausar video');
-  };
-
-  // Si la persona tiene activado "reducir movimiento", el video no arranca solo
-  if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) heroVideo.pause();
-
-  heroToggle.addEventListener('click', () => {
-    if (heroVideo.paused) heroVideo.play(); else heroVideo.pause();
-  });
-  heroVideo.addEventListener('play', syncToggle);
-  heroVideo.addEventListener('pause', syncToggle);
-  syncToggle();
+if (heroVideo) {
+  const keepPlaying = () => { const p = heroVideo.play(); if (p && p.catch) p.catch(() => {}); };
+  keepPlaying();
+  heroVideo.addEventListener('pause', () => { if (!document.hidden) keepPlaying(); });
+  document.addEventListener('visibilitychange', () => { if (!document.hidden) keepPlaying(); });
 }
 
 // Visor de fotos: al hacer clic en una foto de la galería se abre en grande
