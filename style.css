@@ -407,11 +407,11 @@ section { padding: 96px 24px; }
    GALERÍA
 ======================================================= */
 .galeria__grid {
-  max-width: var(--max-width);
+  max-width: 880px;
   margin: 0 auto;
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-  gap: 16px;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 12px;
 }
 .galeria__item {
   aspect-ratio: 3 / 4; /* mismo formato de las fotos: así se ve completo el logo */
@@ -546,13 +546,13 @@ section { padding: 96px 24px; }
    RESPONSIVE
 ======================================================= */
 @media (min-width: 900px) {
-  .hero { flex-direction: row; align-items: center; justify-content: flex-start; padding-right: calc(6% + 352px); } /* deja sitio al video */
+  .hero { flex-direction: row; align-items: center; justify-content: flex-start; padding-right: calc(6% + 292px); } /* deja sitio al video */
   .hero__video {
     position: absolute;
     right: 6%;
     top: 50%;
     transform: translateY(-50%);
-    width: 320px;
+    width: 260px;
     margin: 0;
   }
 }
@@ -598,7 +598,7 @@ section { padding: 96px 24px; }
   .hero__title { font-size: 1.3rem; margin-bottom: 10px; }
   .hero__subtitle { font-size: 0.78rem; line-height: 1.45; margin-bottom: 14px; }
   .hero__foto img { border-radius: 10px; }
-  .hero__video { flex: 0 0 38%; width: 38%; margin: 0; border-radius: 10px; }
+  .hero__video { flex: 0 0 31%; width: 31%; margin: 0; border-radius: 10px; }
 
   /* Paquetes: 2 tarjetas a la vez, más compactas */
   .paquetes__track { gap: 12px; padding: 14px 0 10px; }
@@ -629,7 +629,7 @@ section { padding: 96px 24px; }
   .paquetes__hint { font-size: 0.7rem; }
 
   /* Galería: 3 columnas como en computadora */
-  .galeria__grid { grid-template-columns: repeat(3, 1fr); gap: 6px; }
+  .galeria__grid { grid-template-columns: repeat(4, 1fr); gap: 5px; }
   .galeria__item { border-radius: 6px; }
 
   /* Contacto y pie */
