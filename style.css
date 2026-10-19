@@ -135,12 +135,22 @@ section { padding: 56px 24px; }
 ======================================================= */
 .hero {
   position: relative;
-  min-height: 92vh;
   display: flex;
-  flex-direction: column;   /* celular: texto arriba y video debajo */
-  justify-content: center;
-  padding: 48px 24px;
+  flex-direction: column;   /* arriba: texto y foto; abajo: el video */
+  align-items: center;
+  gap: 40px;
+  padding: 56px 24px 64px;
   overflow: hidden;
+}
+/* Texto a la izquierda y foto a la derecha, los dos con la misma altura */
+.hero__top {
+  position: relative;
+  z-index: 2;
+  width: 100%;
+  max-width: 1100px;
+  display: flex;
+  align-items: stretch;
+  gap: 40px;
 }
 
 /* Efecto de destello de flash al cargar la página */
@@ -157,7 +167,7 @@ section { padding: 56px 24px; }
   100% { opacity: 0; }
 }
 
-.hero__content { max-width: 640px; position: relative; z-index: 2; }
+.hero__content { flex: 1 1 0; min-width: 0; display: flex; flex-direction: column; justify-content: center; }
 .hero__eyebrow {
   text-transform: uppercase;
   letter-spacing: 0.14em;
@@ -166,11 +176,12 @@ section { padding: 56px 24px; }
   margin-bottom: 16px;
 }
 .hero__title { font-size: clamp(2.2rem, 5vw, 3.6rem); margin-bottom: 20px; }
-.hero__subtitle { color: var(--color-text-muted); font-size: 1.1rem; max-width: 480px; margin-bottom: 32px; }
-.hero__foto { margin: 0; }
+.hero__subtitle { color: var(--color-text-muted); font-size: 1.1rem; max-width: 520px; }
+.hero__foto { margin: 0; flex: 0 0 46%; }
 .hero__foto img {
   width: 100%;
-  height: auto;
+  height: 100%;
+  object-fit: cover;
   display: block;
   border-radius: var(--radius);
   box-shadow: 0 16px 40px rgba(0,0,0,0.55);
@@ -181,7 +192,7 @@ section { padding: 56px 24px; }
   position: relative;
   width: min(100%, 300px);
   aspect-ratio: 9 / 16;
-  margin: 40px auto 0;
+  margin: 0 auto;
   border-radius: var(--radius);
   overflow: hidden;
   background: #000000;
@@ -545,15 +556,11 @@ section { padding: 56px 24px; }
 /* =======================================================
    RESPONSIVE
 ======================================================= */
-@media (min-width: 900px) {
-  /* Texto y video juntos y centrados */
-  .hero { flex-direction: row; align-items: center; justify-content: center; gap: 64px; min-height: 0; padding: 56px 24px; }
-  .hero__content { flex: 0 1 600px; }
-  .hero__video { flex: 0 0 260px; width: 260px; margin: 0; }
 }
 
 @media (min-width: 700px) {
   .paquete { flex-basis: calc((100% - 24px) / 2); }
+}
 }
 @media (min-width: 1040px) {
   .paquete { flex-basis: calc((100% - 48px) / 3); }
@@ -586,14 +593,15 @@ section { padding: 56px 24px; }
   .nav__links a { font-size: 0.85rem; }
   .nav__cta { padding: 6px 14px; }
 
-  /* Inicio: texto a la izquierda, video a la derecha, como en computadora */
-  .hero { flex-direction: row; align-items: center; justify-content: flex-start; gap: 14px; min-height: 0; padding: 28px 14px; }
-  .hero__content { flex: 1 1 0; min-width: 0; max-width: none; }
-  .hero__eyebrow { font-size: 0.6rem; margin-bottom: 8px; }
-  .hero__title { font-size: 1.3rem; margin-bottom: 10px; }
-  .hero__subtitle { font-size: 0.78rem; line-height: 1.45; margin-bottom: 14px; }
-  .hero__foto img { border-radius: 10px; }
-  .hero__video { flex: 0 0 31%; width: 31%; margin: 0; border-radius: 10px; }
+  /* Inicio: texto, luego la foto y después el video; todo en una columna legible */
+  .hero { gap: 24px; padding: 28px 18px 36px; }
+  .hero__top { flex-direction: column; gap: 20px; }
+  .hero__eyebrow { font-size: 0.7rem; margin-bottom: 10px; }
+  .hero__title { font-size: 1.85rem; margin-bottom: 14px; }
+  .hero__subtitle { font-size: 1rem; line-height: 1.55; }
+  .hero__foto { flex: none; }
+  .hero__foto img { height: auto; aspect-ratio: 3 / 2; border-radius: 12px; }
+  .hero__video { width: min(72%, 260px); border-radius: 12px; }
 
   /* Paquetes: 2 tarjetas a la vez, más compactas */
   .paquetes__track { gap: 12px; padding: 14px 0 10px; }
@@ -632,3 +640,9 @@ section { padding: 56px 24px; }
   .contacto__info { font-size: 0.9rem; }
   .contacto__direccion { font-size: 0.78rem; }
 }
+
+/* Tabletas: texto y foto lado a lado */
+@media (min-width: 700px) and (max-width: 899px) {
+  .hero__top { flex-direction: row; gap: 24px; }
+  .hero__foto { flex: 0 0 46%; }
+  .hero__foto img { height: 100%; aspect-ratio: auto; }
