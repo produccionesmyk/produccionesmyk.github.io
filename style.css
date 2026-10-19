@@ -187,10 +187,10 @@ section { padding: 56px 24px; }
   box-shadow: 0 16px 40px rgba(0,0,0,0.55);
 }
 
-/* Video del hero: cabina 360° en acción (formato vertical 9:16) */
+/* Video del hero: fotomatón 360° en acción (formato vertical 9:16) */
 .hero__video {
   position: relative;
-  width: min(100%, 300px);
+  width: min(100%, 210px);
   aspect-ratio: 9 / 16;
   margin: 0 auto;
   border-radius: var(--radius);
@@ -601,7 +601,7 @@ section { padding: 56px 24px; }
   .hero__subtitle { font-size: 1rem; line-height: 1.55; }
   .hero__foto { flex: none; }
   .hero__foto img { height: auto; aspect-ratio: 3 / 2; border-radius: 12px; }
-  .hero__video { width: min(72%, 260px); border-radius: 12px; }
+  .hero__video { width: min(56%, 200px); border-radius: 12px; }
 
   /* Paquetes: 2 tarjetas a la vez, más compactas */
   .paquetes__track { gap: 12px; padding: 14px 0 10px; }
