@@ -599,7 +599,7 @@ section { padding: 56px 24px; }
   .hero__subtitle { font-size: 0.72rem; line-height: 1.42; }
   .hero__foto { flex: 0 0 38%; }
   .hero__foto img { height: 100%; aspect-ratio: auto; object-fit: cover; object-position: 36% center; border-radius: 10px; }
-  .hero__video { width: 128px; border-radius: 10px; }
+  .hero__video { width: 108px; border-radius: 10px; }
 
   /* Paquetes: 2 tarjetas a la vez, más compactas */
   .paquetes__track { gap: 12px; padding: 14px 0 10px; }
@@ -646,7 +646,7 @@ section { padding: 56px 24px; }
   .hero__subtitle { font-size: 1rem; }
   .hero__foto { flex: 0 0 46%; }
   .hero__foto img { height: 100%; aspect-ratio: auto; object-fit: cover; object-position: 36% center; }
-  .hero__video { width: 148px; }
+  .hero__video { width: 126px; }
 }
 
 /* Botón flotante de WhatsApp: siempre a la mano para cotizar */
