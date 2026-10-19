@@ -108,7 +108,7 @@ section { padding: 56px 24px; }
 }
 
 .nav__links { display: flex; align-items: center; justify-content: center; gap: 32px; flex-wrap: wrap; }
-.nav__links a { font-size: 0.95rem; color: #333333; }
+.nav__links a { font-size: 1.12rem; font-weight: 700; color: #1a1a1a; }
 .nav__links a:hover { color: #000000; }
 .nav__cta {
   background: var(--color-gold);
@@ -138,8 +138,8 @@ section { padding: 56px 24px; }
   display: flex;
   flex-direction: column;   /* arriba: texto y foto; abajo: el video */
   align-items: center;
-  gap: 40px;
-  padding: 56px 24px 64px;
+  gap: 48px;
+  padding: 56px 24px 0;   /* sin espacio de más debajo del video: queda centrado entre la foto y la sección siguiente */
   overflow: hidden;
 }
 /* Texto a la izquierda y foto a la derecha, los dos con la misma altura */
@@ -346,9 +346,9 @@ section { padding: 56px 24px; }
   padding: 10px 14px;
 }
 .paquete__head--oscuro { background: #000000; color: var(--color-gold); border: 1px solid var(--color-gold); }
-.paquete__label { display: block; font-size: 0.68rem; letter-spacing: 0.16em; text-transform: uppercase; opacity: 0.85; }
-.paquete__nombre { font-family: var(--font-body); font-weight: 700; font-size: 1.2rem; line-height: 1.15; }
-.paquete__horas { font-size: 0.9rem; font-weight: 600; }
+.paquete__label { display: block; font-size: 1.05rem; font-weight: 700; line-height: 1.25; }
+.paquete__nombre { font-family: var(--font-body); font-weight: 700; font-size: 1.05rem; line-height: 1.25; }
+.paquete__horas { display: block; font-size: 1.05rem; font-weight: 700; line-height: 1.25; }
 .paquete__precio { font-family: var(--font-display); font-weight: 700; font-size: 2.3rem; line-height: 1; }
 
 .paquete__ahorro {
@@ -556,11 +556,8 @@ section { padding: 56px 24px; }
 /* =======================================================
    RESPONSIVE
 ======================================================= */
-}
-
 @media (min-width: 700px) {
   .paquete { flex-basis: calc((100% - 24px) / 2); }
-}
 }
 @media (min-width: 1040px) {
   .paquete { flex-basis: calc((100% - 48px) / 3); }
@@ -590,11 +587,11 @@ section { padding: 56px 24px; }
   .nav__slogan { font-size: 0.85rem; text-align: center; }
   .nav__toggle { display: none; }
   .nav__links { gap: 18px; flex-wrap: nowrap; }
-  .nav__links a { font-size: 0.85rem; }
+  .nav__links a { font-size: 0.98rem; font-weight: 700; }
   .nav__cta { padding: 6px 14px; }
 
   /* Inicio: texto, luego la foto y después el video; todo en una columna legible */
-  .hero { gap: 24px; padding: 28px 18px 36px; }
+  .hero { gap: 28px; padding: 28px 18px 0; }
   .hero__top { flex-direction: column; gap: 20px; }
   .hero__eyebrow { font-size: 0.7rem; margin-bottom: 10px; }
   .hero__title { font-size: 1.85rem; margin-bottom: 14px; }
@@ -614,9 +611,7 @@ section { padding: 56px 24px; }
   .paquete__foto--duo { width: 86%; }
   .paquete__foto--duo img { border-width: 2px; border-radius: 8px; }
   .paquete__head { padding: 8px 9px; gap: 6px; border-radius: 8px; }
-  .paquete__label { font-size: 0.5rem; letter-spacing: 0.1em; }
-  .paquete__nombre { font-size: 0.78rem; }
-  .paquete__horas { font-size: 0.65rem; }
+  .paquete__label, .paquete__nombre, .paquete__horas { font-size: 0.74rem; }
   .paquete__precio { font-size: 1.35rem; }
   .paquete__ahorro { font-size: 0.6rem; padding: 3px 8px; margin-top: 8px; }
   .paquete__incluye { font-size: 0.75rem; margin: 10px 0 6px; }
@@ -646,3 +641,4 @@ section { padding: 56px 24px; }
   .hero__top { flex-direction: row; gap: 24px; }
   .hero__foto { flex: 0 0 46%; }
   .hero__foto img { height: 100%; aspect-ratio: auto; }
+}
