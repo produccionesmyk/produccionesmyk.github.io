@@ -655,6 +655,13 @@ section { padding: 56px 24px; }
 .wa-flotante:hover { filter: brightness(1.08); }
 @media (max-width: 699px) { .wa-flotante { padding: 12px; } .wa-flotante span { display: none; } .wa-flotante svg { width: 26px; height: 26px; } }
 
-/* Contacto: enlaces de ruta (Google Maps y Waze) */
-.contacto__rutas { display: flex; flex-wrap: wrap; justify-content: center; gap: 10px; margin-bottom: 32px; }
-.contacto__rutas .contacto__mapa { padding: 9px 18px; border: 1px solid var(--color-gold); border-radius: 999px; font-size: 0.9rem; font-weight: 600; color: var(--color-gold); }
+/* Contacto: un solo botón "Cómo llegar" que despliega Google Maps y Waze */
+.contacto__rutas { display: flex; justify-content: center; margin-bottom: 32px; }
+.ruta { position: relative; }
+.ruta summary { list-style: none; cursor: pointer; padding: 11px 26px; border: 1px solid var(--color-gold); border-radius: 999px; font-size: 1rem; font-weight: 700; color: var(--color-gold); }
+.ruta summary::-webkit-details-marker { display: none; }
+.ruta summary::after { content: " ▾"; }
+.ruta[open] summary { background: var(--color-gold); color: #111; }
+.ruta__menu { display: flex; flex-direction: column; gap: 6px; margin-top: 10px; min-width: 220px; padding: 8px; background: var(--color-card); border: 1px solid #333; border-radius: 14px; }
+.ruta__menu a { padding: 11px 14px; border-radius: 10px; color: #fff; font-weight: 600; text-align: center; }
+.ruta__menu a:hover { background: #2c2c2c; }

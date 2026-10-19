@@ -146,3 +146,10 @@ if (pkTrack && pkPrev && pkNext) {
   window.addEventListener('resize', refresh);
   refresh();
 }
+
+// Cierra el menú "Cómo llegar" al tocar fuera de él
+document.addEventListener("click", function (e) {
+  document.querySelectorAll("details.ruta[open]").forEach(function (d) {
+    if (!d.contains(e.target)) d.removeAttribute("open");
+  });
+});
