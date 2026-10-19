@@ -591,14 +591,14 @@ section { padding: 56px 24px; }
   .nav__cta { padding: 6px 14px; }
 
   /* Inicio: texto a la izquierda y foto a la derecha con la misma altura; el video debajo */
-  .hero { gap: 24px; padding: 24px 14px 0; }
+  .hero { gap: 40px; padding: 24px 14px 0; }
   .hero__top { flex-direction: row; align-items: stretch; gap: 14px; }
   .hero__eyebrow { font-size: 0.62rem; margin-bottom: 8px; }
   .hero__title { font-size: 1.3rem; margin-bottom: 10px; }
   .hero__subtitle { font-size: 0.82rem; line-height: 1.5; }
   .hero__foto { flex: 0 0 42%; }
   .hero__foto img { height: 100%; aspect-ratio: auto; object-position: 28% center; border-radius: 10px; }
-  .hero__video { width: 150px; border-radius: 10px; }
+  .hero__video { width: 128px; border-radius: 10px; }
 
   /* Paquetes: 2 tarjetas a la vez, más compactas */
   .paquetes__track { gap: 12px; padding: 14px 0 10px; }
@@ -638,12 +638,18 @@ section { padding: 56px 24px; }
 
 /* Tabletas: letras más grandes y video un poco mayor */
 @media (min-width: 700px) and (max-width: 899px) {
-  .hero { gap: 32px; padding: 32px 24px 0; }
+  .hero { gap: 48px; padding: 32px 24px 0; }
   .hero__top { gap: 24px; }
   .hero__eyebrow { font-size: 0.72rem; }
   .hero__title { font-size: 1.9rem; }
   .hero__subtitle { font-size: 1rem; }
   .hero__foto { flex: 0 0 46%; }
   .hero__foto img { object-position: 40% center; }
-  .hero__video { width: 170px; }
+  .hero__video { width: 148px; }
 }
+
+/* Botón flotante de WhatsApp: siempre a la mano para cotizar */
+.wa-flotante { position: fixed; right: 16px; bottom: 16px; z-index: 50; display: flex; align-items: center; gap: 8px; padding: 12px 18px; border-radius: 999px; background: #25d366; color: #fff; font-weight: 700; font-size: 0.95rem; text-decoration: none; box-shadow: 0 6px 20px rgba(0,0,0,.45); }
+.wa-flotante svg { width: 22px; height: 22px; fill: currentColor; flex: none; }
+.wa-flotante:hover { filter: brightness(1.08); }
+@media (max-width: 699px) { .wa-flotante { padding: 12px; } .wa-flotante span { display: none; } .wa-flotante svg { width: 26px; height: 26px; } }
