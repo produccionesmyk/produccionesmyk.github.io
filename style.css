@@ -655,7 +655,6 @@ section { padding: 56px 24px; }
 .wa-flotante:hover { filter: brightness(1.08); }
 @media (max-width: 699px) { .wa-flotante { padding: 12px; } .wa-flotante span { display: none; } .wa-flotante svg { width: 26px; height: 26px; } }
 
-/* Contacto: botón grande de WhatsApp y enlace de ubicación */
-.contacto__wa { display: inline-block; font-size: 1.15rem; padding: 16px 36px; margin-bottom: 28px; }
-.contacto__info a.contacto__mapa { display: inline-block; margin: 6px auto 0; padding: 8px 18px; border: 1px solid var(--color-gold); border-radius: 999px; font-size: 0.9rem; }
-@media (max-width: 899px) { .contacto__wa { width: 100%; max-width: 340px; padding: 15px 20px; font-size: 1.05rem; } }
+/* Contacto: enlaces de ruta (Google Maps y Waze) */
+.contacto__rutas { display: flex; flex-wrap: wrap; justify-content: center; gap: 10px; margin-bottom: 32px; }
+.contacto__rutas .contacto__mapa { padding: 9px 18px; border: 1px solid var(--color-gold); border-radius: 999px; font-size: 0.9rem; font-weight: 600; color: var(--color-gold); }
