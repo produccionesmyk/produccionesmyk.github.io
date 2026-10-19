@@ -1,3 +1,4 @@
+html { -webkit-text-size-adjust: 100%; text-size-adjust: 100%; }
 /* =======================================================
    VARIABLES DE DISEÑO
    Cambia estos valores y se actualiza todo el sitio.
@@ -592,12 +593,12 @@ section { padding: 56px 24px; }
 
   /* Inicio: texto a la izquierda y foto a la derecha con la misma altura; el video debajo */
   .hero { gap: 40px; padding: 24px 14px 0; }
-  .hero__top { flex-direction: row; align-items: center; gap: 12px; }
-  .hero__eyebrow { font-size: 0.62rem; margin-bottom: 8px; }
-  .hero__title { font-size: 1.3rem; margin-bottom: 10px; }
-  .hero__subtitle { font-size: 0.8rem; line-height: 1.45; }
-  .hero__foto { flex: 0 0 45%; }
-  .hero__foto img { height: auto; aspect-ratio: 3 / 2; object-fit: contain; border-radius: 10px; }
+  .hero__top { flex-direction: row; align-items: stretch; gap: 12px; }
+  .hero__eyebrow { font-size: 0.58rem; margin-bottom: 6px; }
+  .hero__title { font-size: 1.05rem; line-height: 1.2; margin-bottom: 8px; }
+  .hero__subtitle { font-size: 0.72rem; line-height: 1.42; }
+  .hero__foto { flex: 0 0 38%; }
+  .hero__foto img { height: 100%; aspect-ratio: auto; object-fit: cover; object-position: 36% center; border-radius: 10px; }
   .hero__video { width: 128px; border-radius: 10px; }
 
   /* Paquetes: 2 tarjetas a la vez, más compactas */
@@ -639,12 +640,12 @@ section { padding: 56px 24px; }
 /* Tabletas: letras más grandes y video un poco mayor */
 @media (min-width: 700px) and (max-width: 899px) {
   .hero { gap: 48px; padding: 32px 24px 0; }
-  .hero__top { gap: 24px; align-items: center; }
+  .hero__top { gap: 24px; align-items: stretch; }
   .hero__eyebrow { font-size: 0.72rem; }
   .hero__title { font-size: 1.9rem; }
   .hero__subtitle { font-size: 1rem; }
   .hero__foto { flex: 0 0 46%; }
-  .hero__foto img { height: auto; aspect-ratio: 3 / 2; }
+  .hero__foto img { height: 100%; aspect-ratio: auto; object-fit: cover; object-position: 36% center; }
   .hero__video { width: 148px; }
 }
 
